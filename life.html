@@ -26,6 +26,27 @@
             padding: 0 20px;
         }
 
+        /* 返回按钮样式 */
+        .back-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #e8f4f8;
+            color: #2d7d9a;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            background-color: #2d7d9a;
+            color: white;
+            transform: translateY(-2px);
+        }
+
         /* 顶部标题区 */
         .header {
             text-align: center;
@@ -266,6 +287,9 @@
 <body>
     <!-- 顶部标题区 -->
     <div class="container">
+        <!-- 返回按钮 -->
+        <button class="back-btn" onclick="goBack()">← 返回上一页</button>
+        
         <div class="header">
             <h1>生活中的我</h1>
             <p>在代码与山川之间，认真记录每一个平凡又闪光的日子</p>
@@ -403,12 +427,13 @@
     </div>
 
     <script>
+        // 返回上一页函数
+        function goBack() {
+            window.history.back();
+        }
+        
         // 可选：如果需要添加图片，可在timeline-card里添加img标签
         // 示例：<img src="your-image.jpg" alt="杭州西湖" style="width:100%;border-radius:4px;margin-top:10px;">
     </script>
 </body>
 </html>
-
-
-
-
